@@ -26,9 +26,7 @@ Rules:
 #   - Do NOT print anything
 #
 def get_value(d: dict, key: str):
-    pass
-
-
+  return d[key]
 # -------------------------------------------------
 # key_exists
 # -------------------------------------------------
@@ -44,7 +42,13 @@ def get_value(d: dict, key: str):
 #   - Do NOT print anything
 #
 def key_exists(d: dict, key: str) -> bool:
-    pass
+    
+    if key not in d:
+        return False
+    else:
+        return True
+
+
 
 
 # -------------------------------------------------
@@ -63,7 +67,10 @@ def key_exists(d: dict, key: str) -> bool:
 #   - Do NOT print anything
 #
 def total_values(d: dict) -> int:
-    pass
+    total = 0
+    for key in d:
+        total += d[key]
+    return total
 
 
 # -------------------------------------------------
@@ -83,7 +90,11 @@ def total_values(d: dict) -> int:
 #   - Do NOT print anything
 #
 def count_value(d: dict, target) -> int:
-    pass
+    count = 0
+    for key in d:
+        if d[key] == target:
+         count += 1
+    return count
 
 
 # -------------------------------------------------
