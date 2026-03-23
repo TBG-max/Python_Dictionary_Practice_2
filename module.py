@@ -114,7 +114,11 @@ def count_value(d: dict, target) -> int:
 #   - Do NOT print anything
 #
 def find_max_key(d: dict):
-    pass
+  for key in d:
+     if d[key] == max(d.values()):
+        return key
+    
+    
 
 
 # -------------------------------------------------
@@ -133,4 +137,7 @@ def find_max_key(d: dict):
 #   - Do NOT print anything
 #
 def invert_dictionary(d: dict) -> dict:
-    pass
+    new_dict = {}
+    for key in d:
+        new_dict[d[key]] = key
+    return new_dict     
